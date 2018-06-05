@@ -1,0 +1,1 @@
+// Exercise: Write a function wich will wait for the first async function to finish

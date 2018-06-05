@@ -1,0 +1,1 @@
+// Exercise: write an async function which will await 2 seconds before logging a message
