@@ -13,9 +13,9 @@ Each chapter contains exercises and questions which will walk you threw the jour
 
 ## Chapter 0 - The Event Loop
 
-Before everything, we need to talk about JavaScript's asynchronous model, or how does asynchronous programming work in javascript.
+Before everything, we need to talk about JavaScript's asynchronous model, or how does asynchronous programming work in JavaScript.
 
-The most important question we will answer: ** Is JavaScript an asyncrhonous programming language? **
+The most important question we will answer: **Is JavaScript an asyncrhonous programming language?**
 
 ### JavaScript as a language
 
