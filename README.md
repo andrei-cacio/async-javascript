@@ -4,7 +4,7 @@ This repo contains small exercises to get more accustom with two ways of dealing
 
 This repo contains four big chapters:
 
-0. Chapter 0 - The Event Loop
+0. [Chapter 0 - The Event Loop](#chapter-0---the-event-loop)
 1. Chapter 1 - Callbacks 
 2. Chapter 2 - Promises
 3. Chapter 3 - Async/Await
@@ -30,7 +30,7 @@ A JavaScript runtime is a higher layer over the JavaScript engine which provides
 
 ### What is the event loop?
 
-[!img](http://cek.io/images/event-loop/javascript.png)
+![Chrome Event Loop Representation](http://cek.io/images/event-loop/javascript.png)
 
 ## Bibliography:
 1. [Eloquent JavaScript - Chapter 11: Asyncrhonous Programming](https://eloquentjavascript.net/11_async.html)
