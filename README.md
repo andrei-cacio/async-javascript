@@ -21,11 +21,16 @@ The most important question we will answer: **Is JavaScript an asyncrhonous prog
 
 We all heard about [EcmaScript](https://www.ecma-international.org/ecma-262/8.0/index.html) right (or in it's other forms: *ES5*, *ES6*, *ES2015* etc.)? EcmaScript is the standard wich describes how the language should look and work. This is a very big document which contains every tiny little detail about the language: how objects intereact, what functions they should contain and how they should work etc.. This officla document is written so that future JavaScritp engines know how to be built. 
 
-We all heard of JavaScript engines like: Chrome's [V](https://developers.google.com/v8/)8, Microsoft's [ChakraCore](https://github.com/Microsoft/ChakraCore) or Mozilla's [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey). These engines all follow the [EcmaScript](https://www.ecma-international.org/ecma-262/8.0/index.html) standard.
+We all heard of JavaScript engines like: Chrome's [V8](https://developers.google.com/v8), Microsoft's [ChakraCore](https://github.com/Microsoft/ChakraCore) or Mozilla's [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey). These engines all follow the [EcmaScript](https://www.ecma-international.org/ecma-262/8.0/index.html) standard.
+
+A JavaScript engine has two important internal parts:
 
 ![JavaScript Engine](https://cdn-images-1.medium.com/max/2000/1*OnH_DlbNAPvB9KLxUCyMsA.png)
 
-For funsies, let's open that document and search for a very common function like: `setTimeout`. It should be there right? 
+- **Heap**: is the engine's memory where objects, functions etc. get allocated and managed
+- **Call Stack**: handle's the actual execution of functions
+
+For funsies, let's open the [EcmaScript standard](https://www.ecma-international.org/ecma-262/8.0/index.html) and search for a very common function like: `setTimeout`. It should be there right? 
 No - we will not find that function in the document. Why you ask? The answer is pretty simple. JavaScript as a language, is a syncrhonous programming language. However, besides JavaScript engines there is another player we need to talk about, and that player is: **JavaScript Runtimes**.
 
 A JavaScript runtime is a higher layer over the JavaScript engine which provides extra functionality like libraries, event loops etc. A few examples of runtimes are: Browsers (Chrome, Firefox etc.), NodeJS. A runtime may implement any engine it chooses. This is where the event loop is found, in the JavaScript runtime.
