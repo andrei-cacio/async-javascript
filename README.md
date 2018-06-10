@@ -28,7 +28,7 @@ A JavaScript engine has two important internal parts:
 ![JavaScript Engine](https://cdn-images-1.medium.com/max/2000/1*OnH_DlbNAPvB9KLxUCyMsA.png)
 
 - **Heap**: is the engine's memory where objects, functions etc. get allocated and managed
-- **Call Stack**: handle's the actual execution of functions
+- **Call Stack**: because JavaScript is single threaded, it can do only one thing at a time. The call stack manages how functions get executed, in a *LIFO* kind of fashion.
 
 For funsies, let's open the [EcmaScript standard](https://www.ecma-international.org/ecma-262/8.0/index.html) and search for a very common function like: `setTimeout`. It should be there right? 
 No - we will not find that function in the document. Why you ask? The answer is pretty simple. JavaScript as a language, is a syncrhonous programming language. However, besides JavaScript engines there is another player we need to talk about, and that player is: **JavaScript Runtimes**.
