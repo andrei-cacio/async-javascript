@@ -25,7 +25,7 @@ We all heard of JavaScript engines like: Chrome's [V8](https://developers.google
 
 A JavaScript engine has two important internal parts:
 
-![JavaScript Engine](https://cdn-images-1.medium.com/max/2000/1*OnH_DlbNAPvB9KLxUCyMsA.png)
+![JavaScript Engine](./assets/JS_engine.png)
 
 - **Heap**: is the engine's memory where objects, functions etc. get allocated and managed
 - **Call Stack**: because JavaScript is single threaded, it can do only one thing at a time. The call stack manages how functions get executed, in a *LIFO* kind of fashion.
@@ -37,7 +37,7 @@ A JavaScript runtime is a higher layer over the JavaScript engine which provides
 
 ### What is the event loop?
 
-![Event Loop Representation](https://cdn-images-1.medium.com/max/2000/1*4lHHyfEhVB0LnQ3HlhSs8g.png)
+![Event Loop Representation](./assets/JS_Runtime.png)
 
 ## Bibliography:
 1. [Eloquent JavaScript - Chapter 11: Asyncrhonous Programming](https://eloquentjavascript.net/11_async.html)
