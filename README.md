@@ -5,9 +5,9 @@ This repo contains small exercises to get more accustom with two ways of dealing
 This repo contains four big chapters:
 
 - [Chapter 0 - The Event Loop](#chapter-0---the-event-loop)
-- Chapter 1 - Callbacks 
-- Chapter 2 - Promises
-- Chapter 3 - Async/Await
+- [Chapter 1 - Callbacks](#cchapter-1---callbacks)
+- [Chapter 2 - Promises](#chapter-2---promises)
+- [Chapter 3 - Async/Await](#chapter-3---asyncawait)
 
 Each chapter contains exercises and questions which will walk you threw the journey from callbacks to Promises and Async/Await.
 
