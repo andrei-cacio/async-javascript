@@ -37,7 +37,48 @@ A JavaScript runtime is a higher layer over the JavaScript engine which provides
 
 ### What is the event loop?
 
+The Event Loop is a runtime level implementation which offers asyncrhonous code running abilities:
+
 ![Event Loop Representation](https://cdn-images-1.medium.com/max/2000/1*4lHHyfEhVB0LnQ3HlhSs8g.png)
+
+## Chapter 1 - Callbacks
+**Callbacks** are the most *low level*ish way of handling asyncrhonous code. A callback is a function passed as an argument to another function. The power of this pattern kicks in when combined with an asyncrhonous function:
+
+```javascript
+function foo(callback) {
+	setTimeout(() => {
+		callback()
+	}, 1000);
+}
+```
+
+### Error handling
+We can also use callbacks to handle errors:
+
+```javascript
+function hello(success, failure) {
+	setTimeout(() => {
+		const chance = Math.ceil(Math.random() * 2);
+
+		if (chance == 2) {
+			success()
+		} else {
+			failure();
+		}
+	});
+}
+
+const succ = () => console.log('yay!');
+const failure = () => console.log('I should not play the Loto');
+
+hello(succ, failure);
+```
+
+## Chapter 2 - Promises
+
+
+
+## Chapter 3 - Async/Await
 
 ## Bibliography:
 1. [Eloquent JavaScript - Chapter 11: Asyncrhonous Programming](https://eloquentjavascript.net/11_async.html)

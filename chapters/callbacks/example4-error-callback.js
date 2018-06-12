@@ -1,3 +1,4 @@
+// Will this work?
 function hello() {
 	setTimeout(() => {
 		throw 'shit!';
