@@ -74,8 +74,23 @@ const failure = () => console.log('I should not play the Loto');
 hello(succ, failure);
 ```
 
-## Chapter 2 - Promises
+## Chapter 2 - Promises[9]
 
+```javascript
+console.log('script start');
+
+setTimeout(function() {
+  console.log('setTimeout');
+}, 0);
+
+Promise.resolve().then(function() {
+  console.log('promise1');
+}).then(function() {
+  console.log('promise2');
+});
+
+console.log('script end');
+```
 
 
 ## Chapter 3 - Async/Await
