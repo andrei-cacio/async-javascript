@@ -76,7 +76,6 @@ hello(succ, failure);
 
 <details><summary>Solution example 2</summary>
 <p>
-```javascript
 function all(callback, arr) {
  	let counter = 0;
     arr.forEach(fn => fn(() => counter++));
@@ -98,7 +97,6 @@ const fn2 = cb => setTimeout(() => {
 }, 1000);
 
 all(() => console.log('done'), [fn1, fn2]);
-```
 </p>
 </details>
 
