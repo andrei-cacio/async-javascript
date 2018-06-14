@@ -74,7 +74,7 @@ const failure = () => console.log('I should not play the Loto');
 hello(succ, failure);
 ```
 
-## Chapter 2 - Promises[9](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules)
+## Chapter 2 - Promises[[9]](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules)
 
 What will be the output and why?
 
