@@ -74,7 +74,9 @@ const failure = () => console.log('I should not play the Loto');
 hello(succ, failure);
 ```
 
-## Chapter 2 - Promises[9]
+## Chapter 2 - Promises[9](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules)
+
+What will be the output and why?
 
 ```javascript
 console.log('script start');
@@ -91,6 +93,44 @@ Promise.resolve().then(function() {
 
 console.log('script end');
 ```
+
+<details><summary>Explanation</summary>
+<p>
+
+With Promises there came a new way of executing async code called: **Microtask**. This new concept was neede because Promises can guarantee an order of execution evne though they are asyncrhonous. This means that the event loop has another queueu for schedluing these kind of microtasks. The main difference between a **task** and a **microtask** is that a task different actions can happen between them. After a task si ran, the next task can only pushed to the call stack only if nothing else in mid-execution or the call stack is empty and ready to take in another task. 
+
+With **microtasks** however, they have a **priority** over tasks. If a microtask was queued, it will run before taking in any tasks. Even more, microtasks are processed as long as there are any on the microstack queue. This means that microstack processing can cause a block on the thread as long as you keep schedule them.
+
+This can be better explained threw this two examples:
+
+#### Infnite task creating is non-blocking
+
+```javascript
+function createTask() {
+	console.log('new task');
+	setTimeout(createTask);
+}	
+
+createTask(0);
+```
+
+#### Infinite microtask creaking blocks the main thread
+
+```javascript
+function createMicrotask() {
+	console.log()
+	Promise.resolve().then(createMicrotask);
+}
+
+createMicrotask();
+```
+
+</p>
+</details>
+
+### The Event Loop with Microtasks
+
+![JavaScript Runtime Event Loop with Microtasks](./assets/JS_Runtime_with_Promises.png)
 
 
 ## Chapter 3 - Async/Await
