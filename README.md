@@ -76,27 +76,30 @@ hello(succ, failure);
 
 <details><summary>Solution example 2</summary>
 <p>
-function all(callback, arr) {
- 	let counter = 0;
-    arr.forEach(fn => fn(() => counter++));
+	
+	
+	function all(callback, arr) {
+	    let counter = 0;
+	    arr.forEach(fn => fn(() => counter++));
 
-    const interval = setInterval(() => { 
-      if (counter === arr.length) {
-           clearInterval(interval);
-           callback();
-      }
-    }, 250);
-}
+	    const interval = setInterval(() => { 
+	      if (counter === arr.length) {
+		   clearInterval(interval);
+		   callback();
+	      }
+	    }, 250);
+	}
 
-const fn1 = cb => setTimeout(() => {
-   cb();
-}, 1000);
+	const fn1 = cb => setTimeout(() => {
+	   cb();
+	}, 1000);
 
-const fn2 = cb => setTimeout(() => {
-   cb();
-}, 1000);
+	const fn2 = cb => setTimeout(() => {
+	   cb();
+	}, 1000);
 
-all(() => console.log('done'), [fn1, fn2]);
+	all(() => console.log('done'), [fn1, fn2]);
+
 </p>
 </details>
 
