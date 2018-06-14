@@ -9,16 +9,21 @@ function showWeather(location) {
 		path: `/${location}`
 	};
 
-	http.get(options, res => {
-		let txt = '';
-		res.on('data', data => {
-			txt += data;
-		});
+	return new Promise((resolve, reject) => {
+		http.get(options, res => {
+			let txt = '';
+			res.on('data', data => {
+				txt += data;
+			});
 
-		res.on('end', () => {
-			console.log(txt);
-		});
-	}).on('error', err => console.log('crap', err));
+			res.on('end', () => {
+				resolve(txt);
+			});
+		}).on('error', err => reject('crap', err));
+	});
 }
 
-showWeather('cluj');
+showWeather('poo')
+	.then(result => {
+		console.log(result);
+	}).catch(err => console.log(err));

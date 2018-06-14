@@ -13,3 +13,6 @@ function hello(success, failure) {
 const succ = () => console.log('yay!');
 const failure = () => console.log('I should not play the Loto');
 
+
+
+hello(succ, failure);
