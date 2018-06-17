@@ -161,6 +161,13 @@ createMicrotask();
 
 ## Chapter 3 - Async/Await
 
+This new syntax was first introduced in [ES2017[12]](https://www.ecma-international.org/ecma-262/8.0/#sec-async-function-definitions). We now have two main players for writting asyncrhonous functions:
+
+- [`async function() {}`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+	this will create an `AsyncFunction` which returns a `Promise`.
+- [`await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+	the `await` keyword can only be used inside an `async function` (exceptions like [Chrome's DevTools](https://bugs.chromium.org/p/chromium/issues/detail?id=658558)).
+
 ## Bibliography:
 1. [Eloquent JavaScript - Chapter 11: Asyncrhonous Programming](https://eloquentjavascript.net/11_async.html)
 2. [MDN - Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
@@ -172,3 +179,5 @@ createMicrotask();
 8. [How JavaScript Works: Event Loop and the rist of Async Programming](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
 9. [Jake Archibald - Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 10. [Jake Archibald: In The Loop - JSConf.Asia 2018](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
+11. [Async/Await TC39](https://github.com/tc39/ecmascript-asyncawait)
+12. [ECMAScript® 2017 Language Specification (ECMA-262, 8th edition, June 2017)](https://www.ecma-international.org/ecma-262/8.0/#sec-async-function-definitions)
