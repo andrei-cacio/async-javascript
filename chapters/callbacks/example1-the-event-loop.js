@@ -7,10 +7,14 @@ setTimeout(() => {
 
 console.log('second')
 
-setTimeout(() => {
+var a = setTimeout(() => {
 	console.log('third');
 }, 200);
 
 setTimeout(() => {
 	console.log('forth');
 }, 100);
+
+console.log(a);
+
+
