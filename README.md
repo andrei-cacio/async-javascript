@@ -170,7 +170,24 @@ This new syntax was first introduced in [ES2017[12]](https://www.ecma-internatio
 	this will create an `AsyncFunction` which returns a `Promise`.
 - [`await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
 	the `await` keyword can only be used inside an `async function` (exceptions like [Chrome's DevTools](https://bugs.chromium.org/p/chromium/issues/detail?id=658558)).
+	
+### Error handling
 
+```javascript
+const fn = async () => Promise.reject('err');
+
+async function foo() {
+   try {
+     fn();
+   } catch(e) {
+     console.log(e);
+   }
+}
+
+foo();
+
+// err
+```
 ## Bibliography:
 1. [Eloquent JavaScript - Chapter 11: Asynchronous Programming](https://eloquentjavascript.net/11_async.html)
 2. [MDN - Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
